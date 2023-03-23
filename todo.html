@@ -1,3 +1,5 @@
+<!-- Arrays, Functions, Loops e DOM: -->
+
 <html>
     <head>
         <title>My To-Do app</title>
@@ -7,11 +9,11 @@
         <button onclick="addTodo()">Add todo</button>
         <div id="todo-list"></div>
         <script>
-            const todos = ['Get groceries', 'Wash car', 'Make dinner', 'Do laundry'];
+            const todos = ['Get groceries', 'Wash car', 'Make dinner', 'Do laundry']; //Array
 
             render();
 
-            function addTodo() {
+            function addTodo() { //Function
                 const textbox = document.getElementById('new-todo');
                 const title = textbox.value;
                 todos.push(title);
@@ -19,12 +21,12 @@
                 render();
             }
 
-            function render(){
+            function render(){ //Function
                 const todoList = document.getElementById('todo-list');
                 todoList.innerHTML = '';
 
-                todos.forEach(function (todo){
-                    const element = document.createElement('div');
+                todos.forEach(function (todo){ //Loop
+                    const element = document.createElement('div'); //DOM (Document Object Model)
                     element.innerText = todo;
                     todoList.appendChild(element); 
                 });
